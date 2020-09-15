@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	
+	<!-- webclient starts-->
+    <servlet>
+		<servlet-name>requestOAuth</servlet-name>
+		<servlet-class>com.zoho.oauth.handler.OAuthWebClientHandler</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>requestOAuth</servlet-name>
+		<url-pattern>/zoho/requestOAuth/webClient</url-pattern>
+	</servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>redirectOAuthURL</servlet-name>
+		<servlet-class>com.zoho.oauth.handler.OAuthRedirectHandler</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>redirectOAuthURL</servlet-name>
+		<url-pattern>/zoho/requestOAuth/redirectUrl</url-pattern>
+	</servlet-mapping>
+    <!-- webclient ends-->
+    
+    
+    <!-- API sample starts-->
+    <servlet>
+		<servlet-name>requestAPI</servlet-name>
+		<servlet-class>com.zoho.oauth.handler.DeskAPIHandler</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>requestAPI</servlet-name>
+		<url-pattern>/zoho/deskTickets</url-pattern>
+	</servlet-mapping>
+    
+    <!-- API sample ends-->
+	
+ </web-app>
